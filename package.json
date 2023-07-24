@@ -1,6 +1,6 @@
 {
-  "name": "@devucb/react-native-boilerplate",
-  "version": "3.7.0",
+  "name": "react-native-boilerplate",
+  "version": "0.0.1",
   "description": "React Native boilerplate",
   "repository": {
     "type": "git",
