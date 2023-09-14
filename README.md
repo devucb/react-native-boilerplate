@@ -41,6 +41,17 @@ NAME=Example npm run create-store
 ```
 NAME=Example npm run create-page
 ```
+Another scripts
+
+This script clear your pods and node_modules and reinstall dependices.
+```
+npm run clean-build
+```
+
+Clear cache
+```
+npm run reset-cache
+```
 
 ### Import Structure
 You can use it wherever you want in the following way
@@ -53,5 +64,5 @@ import {useExample} from "@store"
 
 If you want to use another src folder like @screens. Make sure to export the structure you want to use in the folder's index.ts file. For example you can inspect index.ts file in screens folder.
 
-If you want to add another folder to src. You need change tsconfig.json path and babel.config.js
+If you want to add another folder to src you need change tsconfig.json path and babel.config.js
 
