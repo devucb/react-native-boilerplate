@@ -17,7 +17,7 @@ import {NavigationProp,useNavigation} from '@react-navigation/native';
 
 type ${n}ScreenNavigationProp = NavigationProp<
   RootStackParamList,
-  ${n}
+  '${n}'
 >;
 
 export default function ${n}(): JSX.Element {
