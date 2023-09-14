@@ -1,5 +1,5 @@
 export default {
-  username: 'sdfdsf',
+  username: 'username',
   password: 'Password',
   login: 'Login',
   welcome: 'Welcome',

@@ -11,10 +11,14 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "reset-cache": "watchman watch-del-all && npm start --reset cache"
+    "reset-cache": "watchman watch-del-all && npm start --reset cache",
+    "create-page": "node ./scripts/createPage.js --name=$NAME",
+    "create-component": "node ./scripts/createComponent.js --name=$NAME",
+    "create-store": "node ./scripts/createStore.js --name=$NAME"
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "^4.4.7",
+    "@react-native-async-storage/async-storage": "^1.19.3",
     "@react-navigation/bottom-tabs": "^6.5.8",
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/native-stack": "^6.9.13",
@@ -48,6 +52,7 @@
     "@tsconfig/react-native": "^3.0.0",
     "@types/i18n-js": "^3.8.4",
     "@types/react": "^18.0.24",
+    "@types/react-native-vector-icons": "^6.4.14",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.2.1",
     "babel-plugin-module-resolver": "^5.0.0",
@@ -59,13 +64,7 @@
     "typescript": "4.8.4"
   },
   "reactNativePermissionsIOS": [
-    "Camera",
-    "FaceID",
-    "MediaLibrary",
-    "Microphone",
-    "Notifications",
-    "PhotoLibrary",
-    "PhotoLibraryAddOnly"
+    "Notifications"
   ],
   "engines": {
     "node": ">=16"

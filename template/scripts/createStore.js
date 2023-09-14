@@ -8,7 +8,7 @@ function capitalizeFirstLetter(string) {
 const n = capitalizeFirstLetter(yargs.argv.name);
 
 const tsxFile = `
-import create from 'zustand'
+import {create} from 'zustand'
 import { T${n} } from './${n}.type';
 
 const ${n} = create<T${n}>((set) => ({

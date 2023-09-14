@@ -9,14 +9,19 @@ const n = capitalizeFirstLetter(yargs.argv.name);
 
 const tsxFile = `
 import React from 'react';
-import { View, Text } from 'react-native-ui-lib';
+import { View, Text } from 'react-native';
 import { useEffect } from 'react';
 import { styles } from './${n}.style';
-import { useNavigation } from '@react-navigation/native';
-import { PageContainerComponent } from '@components';
+import {RootStackParamList} from '@routes';
+import {NavigationProp,useNavigation} from '@react-navigation/native';
+
+type ${n}ScreenNavigationProp = NavigationProp<
+  RootStackParamList,
+  ${n}
+>;
 
 export default function ${n}(): JSX.Element {
-  const navigation = useNavigation();
+  const navigation = useNavigation<${n}ScreenNavigationProp>();
 
   useEffect(() => {
     const unsubscribe = navigation.addListener('focus', () => {
@@ -26,11 +31,9 @@ export default function ${n}(): JSX.Element {
   }, [navigation]);
 
   return (
-    <PageContainerComponent>
         <View>
           <Text style={styles}>${n}</Text>
         </View>
-    </PageContainerComponent>
     );
 } 
 `;

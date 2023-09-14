@@ -8,16 +8,12 @@ function capitalizeFirstLetter(string) {
 const n = capitalizeFirstLetter(yargs.argv.name);
 
 const tsxFile = `
-import React, { useEffect }  from 'react';
-import { View, Text } from 'react-native-ui-lib';
+import React from 'react';
+import { View, Text } from 'react-native';
 import { P${n}} from './${n}.props';
 import { styles } from './${n}.style';
 
 export default function ${n}({ label }: P${n}): JSX.Element {
-
-  useEffect(() => {
-    console.log("${n} Component Loaded")
-  }, []);
 
   return (
     <View>
