@@ -43,7 +43,7 @@ NAME=Example npm run create-page
 ```
 Another scripts
 
-This script clear your pods and node_modules and reinstall dependices.
+This script clear your pods and node_modules and reinstall dependencies.
 ```
 npm run clean-build
 ```
